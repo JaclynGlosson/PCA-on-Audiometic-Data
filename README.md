@@ -10,8 +10,6 @@ The objective was to perform a principal components analysis on audiometric data
 * [Visual Plots and Interpretation]()
 * [Use a Regression]()
 * [Standardize Variables and Repeat Analysis]()
-* [Use a Regression]()
-* [References]()
 
 ## Audiometric Data
 Audio.csv "gives the audiometric data for 100 males, age 39. An audiometer is used to expose an individual to a signal of a given frequency with an increasing intensity until the signal is perceived. These threshold measurements are calibrated in units referred to as decibel loss in comparison to a reference standard for the instrument. Observations were obtained, one ear at a time, for the frequencies 500 Hz, 1000 Hz, 2000 Hz, and 4000 Hz. The limits of the instrument are -10 to 99 decibels. A negative value does not imply better than average hearing: the audiometer had a calibration "zero" and these observations are in relation to that"
@@ -73,11 +71,8 @@ The below scree plot visualizes the percent variance of each PC (red) and variab
 ## Use a Regression
 Running a regression between original variables and a random Y variable, and running a regression between all PCs and a random Y variable, I am able to get the same R squared (0.9804) meaning that 98% of the variance in the data can be explained by the regression line. In running a regression between the same random Y variable and L4000 and R4000, I get an R squared of 0.669, while running a regression with the first two PCs results in an R squared of 0.967. This demonstrates the dimension reduction ability of PCA.
 
-## Standardize Variables and Repeat Analysis
+## Standardize Variables 
 Intuitively, standardization is not ideal for this type of data set, because it could make interpretation difficult for individuals. Standardization can help us identify those values that are away from the average- but interpreters should be wary if the average value for a column is actually indicative of hearing loss- because then anyone average, above average, or even slightly below average could have hearing loss.  Since interpretations for hearing loss are in decibels, it is better advised to leave the data as is, because it will lose its interpretability.
-For standardized PC1, we see that all eigenvectors are negative and of similar weight, therefore PC1 can be thought of as a measure of overall hearing loss. PC2 has negative values on higher frequencies, and positive values on lower frequencies. Individuals who have hearing loss on higher frequencies will have a low PC2 value relative to those with hearing loss at lower frequencies. This PC2 could even differentiate those that have noise induced hearing loss (in which higher frequencies are the first to go) from other types of hearing loss.
-For this, we use the eigenvalue-greater-than-one rule, which states that “for standardized data the amount of variance extracted by each component should, at minimum, be equal to the variance of at least one variable” (Subhash Sharma, Pg 76). Therefore we will only look at the first two PCs for our analysis. However, it is worth noting that the third PC is very close to 1. PC3 has negative values on the peripheral frequencies- the highest and lowest, while midrange frequencies are positive.
-
 
 
 
