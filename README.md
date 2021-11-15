@@ -38,11 +38,33 @@ The data consists of 8 different variables corresponding to right and left ear e
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/79448ccbcc5fc74b6da2f2076deaa9f8afa14025/Images/image50.png)
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/79448ccbcc5fc74b6da2f2076deaa9f8afa14025/Images/image2.png)
 
+## Defining the Problem in terms of PCs
+The principle component formulas are as follows, where Y1 is the first principle component, and a11….a18, the eigenvectors, are as large as possible, subject to √(a112 + a122  +...+ a152 ) =1
 
+* Y1=a11\*L500+a12\*L1000+a13\*L2000+a14\*L4000 + a15\*R500 + a16\*R1000 + a17\*R2000 + a18\*R4000
+* Y2=a21\*L500+a22\*L1000+a23\*L2000+a24\*L4000 + a25\*R500 + a26\*R1000 + a27\*R2000 + a28\*R4000...
+Eigenvalues demonstrate the share of importance of the PC relative to the other PCs. The sum of all eigenvalues is equal to 1154.5, the sum of all variances. The first three eigenvalues explain 86.1% of the variance in the data, which meets the 80% threshold for variation explanation. The first eigenvalue explains a very large share of the data variation, at 61%. As both R4000 and L4000 variables had the largest variances, it was expected that they would have large eigenvectors on PC1, with L4000 being the larger of the two (-0.68 and -0.66, respectively). This makes intuitive sense, because we want to magnify the variable with the largest variance on the first PC, which will account for the largest percent of variation. For PC1, a high decibel loss in L4000 and R4000 is associated with a low value of PC1. All values are negative, such that any large number of decibel loss will have a low value of PC1. For PC2, a high decibel loss in L2000 is associated with a high value of PC2. As L2000 was the variable associated with the third most variance in the data (10%) it makes sense that it would have a high eigentor. Interestingly, the highest eigenvectors in PC3 are the same for PC1- except that a high decibel loss in L4000 is associated with a high PC3 value, while a high decibel loss in R4000 is associated with a low PC3 value. Thus PC3 shows the differentiation between R and L 4000 variables.
 
+## Values of the PCs
+From PC1, individuals 98, 71, 28, 35, and 66 all have the most severe hearing loss in R and L 4000Hz, because they have the lowest values. From PC2 we can see that individuals 40, 97, and 60 have high hearing loss in L2000, because they have the highest values. This is consistent with the original data.
+![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/0720d79525c1eb852c9f7ba3027193851621ee5f/Images/image11.png)
 
+## Variance Estimate Checks
 
+<b>Property C: Check variance estimates of PCs vs Original X and other properties.</b><br>
+For this analysis, we only looked at the top three PCs. As the PCs after PC3 are a weaker percent variance than the three largest percent variances in the original variables, they should be excluded. 
 
+![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/0720d79525c1eb852c9f7ba3027193851621ee5f/Images/image4.png)
+
+<b>Property E: eik is proportional to correlation (Xi, Xk), p (Xi,Xk)</b><br>
+Yes, as we see the eigenvectors for L4000 and R4000 are both the strongest correlations.
+
+![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/0720d79525c1eb852c9f7ba3027193851621ee5f/Images/image30.png)
+
+<b>Property G: Are they all uncorrelated? </b><br>
+Yes!
+
+## Visual Plots and Interpretation
 
 ## References
 * American Family Physician, Retrieved on 4/30/2021 at https://www.aafp.org/afp/2013/0101/p41.html#:~:text=Screening%20audiometry%20presents%20tones%20across,to%2020%20dB%20for%20children).&text=Threshold%20search%20audiometry%20determines%20the,50%20percent%20of%20the%20time.
