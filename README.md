@@ -35,6 +35,8 @@ The data consists of 8 different variables corresponding to right and left ear e
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/fc2b30acecce2b8fe6f8652e0f118fd3693cc22c/Images/image23.png)
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/fc2b30acecce2b8fe6f8652e0f118fd3693cc22c/Images/image49.png)
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/fc2b30acecce2b8fe6f8652e0f118fd3693cc22c/Images/image28.png)
+![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/79448ccbcc5fc74b6da2f2076deaa9f8afa14025/Images/image50.png)
+![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/79448ccbcc5fc74b6da2f2076deaa9f8afa14025/Images/image2.png)
 
 
 
