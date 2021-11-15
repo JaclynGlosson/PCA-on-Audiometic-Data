@@ -46,6 +46,8 @@ Eigenvalues demonstrate the share of importance of the PC relative to the other 
 
 ## Values of the PCs
 From PC1, individuals 98, 71, 28, 35, and 66 all have the most severe hearing loss in R and L 4000Hz, because they have the lowest values. From PC2 we can see that individuals 40, 97, and 60 have high hearing loss in L2000, because they have the highest values. This is consistent with the original data.
+
+
 ![](https://github.com/JaclynGlosson/PCA-on-Audiometic-Data/blob/0720d79525c1eb852c9f7ba3027193851621ee5f/Images/image11.png)
 
 ## Variance Estimate Checks
